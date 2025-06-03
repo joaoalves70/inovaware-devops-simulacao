@@ -7,3 +7,7 @@ def test_estimativa_simples():
 def test_velocidade_zero():
     with pytest.raises(ValueError):
         estimar_tempo(5, 0)
+
+def test_distancia_negativa():
+    with pytest.raises(ValueError):
+        estimar_tempo(-10, 30)
