@@ -24,6 +24,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Executar testes com Pytest
+   - name: Executar testes com Pytest
       run: |
+        export PYTHONPATH=$PYTHONPATH:$(pwd)/inovaware-devops-simulacao/src
         pytest
